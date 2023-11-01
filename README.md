@@ -1,6 +1,6 @@
 # CSPackedStream
 
-Simple bit packing functionality for compressing data. Works well with delta compression. 
+Simple bit packing class for compressing data. Works well with delta compression. 
 
 ## Pre-existing buffer example
 ```
