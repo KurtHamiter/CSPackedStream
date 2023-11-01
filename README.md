@@ -16,6 +16,9 @@ Simple bit packing class for compressing data. Works well with delta compressed 
         // In this example, all values in floats past the third decimal place will be truncated.
         packedStream.SetPrecision(3);
 
+        // Reset buffer before initial read/write to start from the beginning.
+        packedStream.Reset();
+
         packedStream.Write(12);
         packedStream.Write(345.6789f);
         packedStream.Write(true);
@@ -45,6 +48,8 @@ Simple bit packing class for compressing data. Works well with delta compressed 
         // In this example, all values in floats past the second decimal place will be truncated.
         packedStream.SetPrecision(2);
 
+        // Reset buffer before initial read/write to start from the beginning.
+
         packedStream.Write(12);
         packedStream.Write(345.6789f);
         packedStream.Write(false);
@@ -53,8 +58,10 @@ Simple bit packing class for compressing data. Works well with delta compressed 
         Console.WriteLine(packedStream.ReadFloat());
         Console.WriteLine(packedStream.ReadBool());
 
-        // Obtain byte data
+        // Obtain internal byte buffer.
         byte[] myBuffer = packedStream.GetBuffer();
+        // Get total amount of bytes written since the last reset.
+        uint bytesWritten = packedStream.GetByteCount();
 
         // Output:
         // 12
