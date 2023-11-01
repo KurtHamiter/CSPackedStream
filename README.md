@@ -53,6 +53,9 @@ Simple bit packing class for compressing data. Works well with delta compressed 
         Console.WriteLine(packedStream.ReadFloat());
         Console.WriteLine(packedStream.ReadBool());
 
+        // Obtain byte data
+        byte[] myBuffer = packedStream.GetBuffer();
+
         // Output:
         // 12
         // 345.67
