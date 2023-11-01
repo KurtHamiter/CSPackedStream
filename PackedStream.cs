@@ -135,6 +135,13 @@ public class PackedStream
 
     public byte[] GetBuffer() { return dataBuffer8; }
 
+    public uint GetByteCount()
+    {
+        uint returnValue  = segmentsWritten * 8;
+             returnValue += (uint)(segmentBitsWritten / 8) + 1;
+        return returnValue;
+    }
+
     public void SetBuffer(byte[] buffer)
     {
         if (buffer.Length > 0)
