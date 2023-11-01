@@ -13,7 +13,7 @@ Simple bit packing class for compressing data. Works well with delta compressed 
         // Buffer size MUST be multiple of 8 otherwise SetBuffer will throw.
         packedStream.SetBuffer(myBuffer);
         // Sets the amount of decimal places when packing floats.
-        // In this example, all values past the third decimal place will be truncated.
+        // In this example, all values in floats past the third decimal place will be truncated.
         packedStream.SetPrecision(3);
 
         packedStream.Write(12);
@@ -42,7 +42,7 @@ Simple bit packing class for compressing data. Works well with delta compressed 
 
         // If buffer size is not a multiple of 8, it will be automatically increased. Will not throw.
         packedStream.CreateBuffer(65536);
-        // In this example, all values past the second decimal place will be truncated.
+        // In this example, all values in floats past the second decimal place will be truncated.
         packedStream.SetPrecision(2);
 
         packedStream.Write(12);
