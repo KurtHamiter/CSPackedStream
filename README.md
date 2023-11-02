@@ -49,6 +49,7 @@ Simple bit packing class for compressing data. Works well with delta compressed 
         packedStream.SetPrecision(2);
 
         // Reset buffer before initial read/write to start from the beginning.
+        packedStream.Reset();
 
         packedStream.Write(12);
         packedStream.Write(345.6789f);
