@@ -16,7 +16,7 @@ Simple bit packing class for compressing data. Works well with delta compressed 
         // In this example, all values in floats past the third decimal place will be truncated.
         packedStream.SetPrecision(3);
 
-        // Reset buffer before initial read/write to start from the beginning.
+        // Reset buffer positions before initial read/write to start from the beginning.
         packedStream.Reset();
 
         packedStream.Write(12);
@@ -48,7 +48,7 @@ Simple bit packing class for compressing data. Works well with delta compressed 
         // In this example, all values in floats past the second decimal place will be truncated.
         packedStream.SetPrecision(2);
 
-        // Reset buffer before initial read/write to start from the beginning.
+        // Reset buffer positions before initial read/write to start from the beginning.
         packedStream.Reset();
 
         packedStream.Write(12);
