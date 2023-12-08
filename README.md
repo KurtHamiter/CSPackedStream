@@ -1,6 +1,6 @@
 # CSPackedStream
 
-Simple bit packing class for compressing data. Works well with delta compressed values. 
+Simple bit packing class for compressing data in C#. Works well with delta compressed values. 
 
 ## Pre-existing buffer example
 ```
